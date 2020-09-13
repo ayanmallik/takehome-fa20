@@ -45,9 +45,11 @@ class App extends Component {
   addRestaurant = () => {
     this.setState((prevState) => ({
     restaurants: [...prevState.restaurants, 
-    {id: prevState.restaurants.length + 1,
-    name: prevState.inputValue,
-    rating: 0}]}))
+    {
+      id: prevState.restaurants.length + 1,
+      name: prevState.inputValue,
+      rating: 0
+    }]}))
   }
 }
 
