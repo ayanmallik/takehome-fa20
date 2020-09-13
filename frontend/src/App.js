@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Counter from './Counter'
 import Instructions from './Instructions'
 import Restaurant from './Restaurant'
 
@@ -10,14 +11,16 @@ class App extends Component {
         {id: 1, name: "Golden Harbor", rating: 10},
         {id: 2, name: "Potbelly", rating: 6},
         {id: 3, name: "Noodles and Company", rating: 8},
-      ]
+      ],
+      count: 0
     }
   }
 
   render() {
     return (
       <div className="App">
-        <Instructions />
+        <Counter count={this.state.count}/>
+        <Instructions complete={true} />
         {this.state.restaurants.map(x => (
           <Restaurant id={x.id} name={x.name} rating={x.rating} />
         ))}
