@@ -11,7 +11,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        {this.state.count}
+        Rating: {this.state.count}
         
         <br>
         </br>
